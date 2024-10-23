@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --white: #FFFFFF;
+    --basic: #E9F6FF;
+    --lightblue: #9CD5FF;
+    --midnight: #291D89;
+    --primaryFont: 'Poppins', serif;
+    --secondaryFont: 'Lora', serif;
+}
+
+body {
+    background-color: var(--white);
+    
+}
+
+h1{
+    font-family: var(--primaryFont);
+    font-weight: 600;
+    color: var(--midnight);
+}
+
+h3{
+    font-family: var(--secondaryFont);
+    font-weight: 400;
+}
