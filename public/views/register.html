@@ -3,14 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PeduliDisabilitas</title>
-    <link rel="stylesheet" href="../style/register.css">
+    <title>Register</title>
+    <link rel="stylesheet" href="/style/register.css">
+    <link rel="stylesheet" href="/public/style/register.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
+        
+        const firebaseConfig = {
+          apiKey: "AIzaSyDlnPImmvlGesXSzXqH-RLI4QyL2qVkKd0",
+          authDomain: "pedulidisabilitas-a8543.firebaseapp.com",
+          projectId: "pedulidisabilitas-a8543",
+          storageBucket: "pedulidisabilitas-a8543.appspot.com",
+          messagingSenderId: "422069751597",
+          appId: "1:422069751597:web:a69c60bea4000914090da4",
+          measurementId: "G-8PET8RYEF8"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+
+    <script type="module" src="/public/scripts/register.js"></script>
+
 </head>
 <body>
     <h1>PeduliDisabilitas.</h1>
@@ -19,16 +41,16 @@
         <div class="input-group1"></div>
             
             <label for="email">Email</label>
-            <input type="text" id="email" name="email" placeholder="" required>
+            <input type="email" id="register-email" name="email" placeholder="" required>
             
             <label for="username">Username</label>
-            <input type="text" id="username" name="username" placeholder="" required>
+            <input type="text" id="register-username" name="username" placeholder="" required>
 
             <label for="phone">Phone Number</label>
-            <input type="text" id="phone" name="phone" placeholder="" required>
+            <input type="text" id="register-phone" name="phone" placeholder="" required>
 
             <label for="dob">Date of Birth</label>
-            <input type="date" id="dob" name="dob" placeholder="" required>
+            <input type="date" id="register-dob" name="dob" placeholder="" required>
 
             <label for="gender">Gender</label>
             <div class="gender-group">
@@ -40,17 +62,17 @@
             </div>            
 
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="" required>
+            <input type="password" id="register-password" name="password" placeholder="" required>
 
             <label for="password">Confirm Password</label>
             <input type="password" id="confirmpass" name="confirmpass" placeholder="" required>
         </div>
         <div class="button-register">
-            <button><a class="reg" href="home.html">Register</a></button>
+            <button class="reg" type="submit">Register</button>
         </div>
         <h5>Already have an account? <a class="regist" href="login.html">Login</a></h5>
     </form>
 
-    <script src="../scripts/register.js"></script>
+   
 </body>
 </html>
