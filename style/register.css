@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    position: relative;
+    height: 100vh;
+    display: grid;
+  }
+  body::before{
+    background-image: url(../assets/image/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 90%;
+    position: absolute;
+    content: '';
+    inset: 0;
+    opacity: 0.7;
+  }
+  h1{
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: #7794b6;
+    font-size: 40px;
+    padding-left: 4rem;
+    padding-top: 2rem;
+    isolation: isolate;
+  }
+  .logo {
+    height: 100px;
+    width: 390px;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+  }
+  .register {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0.1, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .register-form {
+    margin-top: 3rem;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    height: 48rem;
+    width: 30rem;
+    border-radius: 20px;
+    background-color: white;
+    margin-left: 30rem;
+    opacity: 0.95;
+    padding-bottom: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  
+  .register-form h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 30px;
+    margin-top: 3rem;
+  }
+  .input-group1 {
+    margin-top: 2rem;
+  }
+  
+  label {
+    margin-bottom: 0.5rem;
+    /* color: #555; */
+  }
+  
+  input {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    padding: 10px;
+    border: 0.5px solid #7e7d7d;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    height: 35px;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  input:focus {
+    border-color: #9b59b6;
+    outline: none;
+  }
+  .reg {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 13px;
+    color: white;
+  }
+  button {
+    margin-top: 1.5rem;
+    height: 35px;
+    width: 70%;
+    margin-left: 3.5rem;
+    border-radius: 10px;
+    background-color: #291d89;
+    opacity: 100%;
+    border: none;
+  }
+  h5 {
+    padding-top: 1rem;
+    font-size: 12px;
+    text-align: center;
+  }
+  .regist {
+    color: black;
+    text-decoration: none;
+  }
+  
+.gender-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 9px;
+    padding-right: 5rem;
+}
+
+.gender-group label[for="gender"] {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+label[for="gender"]{
+    margin-top: 0.5rem;
+}
+.gender-group input[type="radio"] {
+    transform: scale(0.5);
+    align-items: center;
+}
+
+.gender-group label[for="male"], 
+.gender-group label[for="female"] {
+    font-size: 14px;
+    margin-right: 20px;
+    display: inline; 
+}
