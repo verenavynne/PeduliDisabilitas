@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../style/profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a class ="headline" href="#">PeduliDisabilitas</a>
+            <div class="Menu">
+                <a href="index.html">Home</a>
+                <a href="views/products.html">Products</a>
+                <a href="views/aboutus.html">About Us</a>
+                <a href="views/aboutus.html">Contact Us</a>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Type to search...">
+                <i class="search icon"data-feather="search"></i>
+            </div>
+
+            <div class="navbar-extra">
+                <a href="#" id="message">
+                    <i data-feather="message-circle"></i></a>
+                <a href="#" id="shopping">
+                    <i data-feather="shopping-cart"></i></a>
+                <a href="#">
+                    <img src="/assets/image/profile-pict.jpg" alt="" class="profile">
+                </a>
+                <a href="#" id="hamburger">
+                    <i data-feather="menu"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="profile-container">
+
+        <div class="sidebar">
+            <img src="../assets/image/profile-pict.jpg" alt="Profile Picture" class="profile-picture">
+            <div class="upload-section">
+                <p>Do you want to upload your products?</p>
+                <button class="upload-button"><a class="upload" href="Product.html">Upload</a></button>
+            </div>
+        </div>
+
+        <div class="profile-details">
+            <div class="header">
+                <h2>My Profile</h2>
+                <button class="logout-button"><a class="logout" href="login.html">Log Out</a></button>
+            </div>
+
+            <div class="details">
+                <div class="detail-item">
+                    <label>Username</label>
+                    <input type="text" value="thomas_05104" disabled>
+                </div>
+                <div class="detail-item">
+                    <label>Name</label>
+                    <input type="text" value="Thomas Ardian" disabled>
+                </div>
+                <div class="detail-item">
+                    <label>Email</label>
+                    <input type="email" value="thomas.ardian@gmail.com" disabled>
+                </div>
+                <div class="detail-item">
+                    <label>Phone Number</label>
+                    <input type="tel" value="081273649873" disabled>
+                </div>
+                <div class="detail-item">
+                    <label>Date of Birth</label>
+                    <input type="text" value="20 September 2000" disabled>
+                </div>
+                <div class="detail-item">
+                    <label>Gender</label>
+                    <input type="text" value="Laki - Laki" disabled>
+                </div>
+                <div class="detail-item">
+                    <label>Password</label>
+                    <input type="password" value="***********" disabled>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        feather.replace()
+    </script>
+    <script src="profile.js"></script>
+</body>
+</html>
