@@ -16,16 +16,205 @@
 
 body {
     background-color: var(--white);
+    font-family: var(--secondaryFont);
     
 }
 
-h1{
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    position: fixed;
+    background-color:rgb(255, 255, 255, 0.7);
+    border-bottom: 1px solid var(--basic);
+    top:0;
+    left:0;
+    right:0;
+    z-index:9999;
+  
+}
+
+.navbar .headline{
     font-family: var(--primaryFont);
-    font-weight: 600;
+    font-size: 35px;
     color: var(--midnight);
 }
 
-h3{
+.navbar .img{
+    width: 425px ;
+    height: auto;
+    
+
+}
+
+.navbar .Menu a{
+    display: inline-block;
+    margin: 0 1rem;
+    color:black;
     font-family: var(--secondaryFont);
-    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.Menu a.active{
+    color: #73bcf1;
+}
+
+.Menu a::after{
+    content: ""; 
+    position: absolute; 
+    left: 0; 
+    bottom: 0; 
+    height: 2px; 
+    width: 100%; 
+    background: var(--lightblue); 
+    transform: scaleX(0); 
+    transition: transform 0.3s ease;
+
+}
+
+.Menu a:hover::after{
+    transform: scaleX(1);
+}
+
+.navbar-extra a{
+    color:black;
+    margin:0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-extra a:hover{
+    color:var(--lightblue);
+
+}
+
+.navbar-extra img{
+    height: 35px;
+    width: auto;
+    border-radius: 80px;
+}
+
+#hamburger{
+    display:none;
+}
+
+.search-bar {
+    position: relative;
+    max-width: 500px;
+}
+
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 10px 40px 10px 15px; 
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    font-size: 14px;
+}
+
+
+.search-bar .icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 14px;
+}
+
+/* Media Queries */
+
+/* laptop */
+@media (max-width:1366px){
+    html{
+        font-size:70%;
+    }
+}
+
+/* Tablet */
+@media (max-width:758px){
+    html{
+        font-size:62.5%;
+    }
+
+    #hamburger{
+        display:inline-block;
+    }
+
+    .Menu{
+        position:absolute;
+        top:100%;
+        right:-100%;
+        width:30rem;
+        height:100vh;
+        background-color: rgb(0, 0, 0,0.7) ;
+        transition: 0.3s;
+    }
+
+    .Menu a.acitve{
+        color:var(--lightblue);
+        border-bottom-style: solid;
+        border-bottom-color:var(--midnight);
+        border-bottom-width: 0.1rem;
+    }
+
+
+    .navbar .Menu a{
+        color:var(--lightblue);
+        display:block;
+        margin:1.5rem;
+        padding:0.5rem;
+        font-size: 2rem;
+    }
+
+    
+    .Menu a::after{
+        border-bottom-style: solid;
+        border-bottom-color:var(--midnight);
+        border-bottom-width: 0.1rem;
+        transform-origin: 0 0;
+    }
+
+    .Menu a:hover::after{
+        transform: scaleX(0.2);
+        transform-origin: 0 0;
+    }
+
+    .navbar-extra img{
+        height: 20px;
+    }
+
+    .navbar-extra i{
+        height: 20px;
+        width: auto;
+    }
+
+    .search-bar input[type="text"] {
+        width: 100%;
+        padding: 10px; 
+        border: 1px solid #ccc;
+        border-radius: 14px;
+        font-size: 14px;
+    }
+
+    .search-bar .icon {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        color: #888;
+        font-size: 14px;
+    }
+
+
+}
+
+/* Phone */
+@media (max-width:450px){
+    html{
+        font-size:55%;
+    }
 }
