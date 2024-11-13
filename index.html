@@ -8,13 +8,47 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
+    <script src="https://unpkg.com/feather-icons"></script>
     <title>Home</title>
 </head>
 <body>
-    <h1 class="primary">Lora</h1>
-    <h3 class="secondary">Lora</h3>
-    <h1>Hello</h1>
-    <h1>tes pull request</h1>
+    <nav>
+        <div class="navbar">
+            <a class ="headline" href="#">PeduliDisabilitas</a>
+            <div class="Menu">
+                <a href="index.html" class="active">Home</a>
+                <a href="views/products.html">Products</a>
+                <a href="views/aboutus.html">About Us</a>
+                <a href="views/aboutus.html">Contact Us</a>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Type to search...">
+                <i class="search icon"data-feather="search"></i>
+            </div>
+
+            <div class="navbar-extra">
+                <a href="#" id="message">
+                    <i data-feather="message-circle"></i></a>
+                <a href="#" id="shopping">
+                    <i data-feather="shopping-cart"></i></a>
+                <a href="#">
+                    <img src="assets/image/profile-icon.png" alt="">
+                </a>
+                <a href="#" id="hamburger">
+                    <i data-feather="menu"></i>
+                </a>
+            </div>
+           
+        </div>
+    </nav>
+
+    
+    <script>
+        feather.replace()
+    </script>
+
+    <script src="scripts/script.js">
+    </script>
 </body>
 </html>
