@@ -16,7 +16,7 @@
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
-        
+        import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
         const firebaseConfig = {
           apiKey: "AIzaSyDlnPImmvlGesXSzXqH-RLI4QyL2qVkKd0",
           authDomain: "pedulidisabilitas-a8543.firebaseapp.com",
@@ -29,6 +29,7 @@
 
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
+        const db = getFirestore(app);
     </script>
 
     <script type="module" src="/public/scripts/register.js"></script>
@@ -46,6 +47,9 @@
             <label for="username">Username</label>
             <input type="text" id="register-username" name="username" placeholder="" required>
 
+            <label for="username">Name</label>
+            <input type="text" id="register-name" name="name" placeholder="" required>
+
             <label for="phone">Phone Number</label>
             <input type="text" id="register-phone" name="phone" placeholder="" required>
 
@@ -54,10 +58,10 @@
 
             <label for="gender">Gender</label>
             <div class="gender-group">
-                <input type="radio" id="male" name="gender" value="male" required>
+                <input id="gender" type="radio" id="male" name="gender" value="male" required>
                 <label for="male">Male</label>
                 
-                <input type="radio" id="female" name="gender" value="female" required>
+                <input id="gender" type="radio" id="female" name="gender" value="female" required>
                 <label for="female">Female</label>
             </div>            
 

@@ -13,7 +13,7 @@
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
-        
+        import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
         const firebaseConfig = {
           apiKey: "AIzaSyDlnPImmvlGesXSzXqH-RLI4QyL2qVkKd0",
           authDomain: "pedulidisabilitas-a8543.firebaseapp.com",
@@ -26,9 +26,10 @@
 
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
+        const db = getFirestore(app);
     </script>
 
-    <script type="module" src="/public/scripts/login.js" defer></script>
+    <script type="module" src="../scripts/login.js" defer></script>
 </head>
 <body>
     <h1>PeduliDisabilitas.</h1>
@@ -45,6 +46,8 @@
             <button class="log" type="submit">Login</button>
         </div>
         <h5>Don't have an account? <a class="regist" href="register.html">Register</a></h5>
+        
     </form>
+   
 </body>
 </html>

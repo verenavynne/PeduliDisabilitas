@@ -1,9 +1,10 @@
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
 
-// Handle form submission for login
 document.addEventListener('DOMContentLoaded', () => {
-  const auth = getAuth(); // Firebase auth instance
 
+  const auth = getAuth(); 
+  const resetLink = document.querySelector('.reset-link');
   const form = document.getElementById('login-form');
 
   if (form) {
@@ -46,8 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function validatePassword(password) {
-    return password.length >= 6; 
+    return password.length >= 8; 
   }
 });
+
+
+
 
 

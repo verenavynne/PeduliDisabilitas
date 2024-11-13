@@ -1,16 +1,39 @@
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-
-// Initialize Firebase Auth
-const auth = getAuth();
+import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+const firebaseConfig = {
+    apiKey: "AIzaSyDlnPImmvlGesXSzXqH-RLI4QyL2qVkKd0",
+    authDomain: "pedulidisabilitas-a8543.firebaseapp.com",
+    projectId: "pedulidisabilitas-a8543",
+    storageBucket: "pedulidisabilitas-a8543.appspot.com",
+    messagingSenderId: "422069751597",
+    appId: "1:422069751597:web:a69c60bea4000914090da4",
+    measurementId: "G-8PET8RYEF8"
+  };
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
 
 const form = document.querySelector('.register-form');
 const emailInput = document.getElementById('register-email');
 const usernameInput = document.getElementById('register-username');
+const nameInput = document.getElementById('register-name');
 const phoneInput = document.getElementById('register-phone');
 const passwordInput = document.getElementById('register-password');
 const confirmPassInput = document.getElementById('confirmpass');
 const registerButton = document.querySelector('.button-register button');
 const dobInput = document.getElementById('register-dob');
+
+function validateName() {
+    const name = nameInput.value.trim();
+    const specialCharRegex = /[_!@#$%^&*(),.?":{}|<>]/;
+    
+    if (specialCharRegex.test(name)) {
+        alert('Name must not contain any special characters.');
+        return false;
+    }
+    return true;
+}
 
 function validateDOB() {
     const dob = new Date(dobInput.value);
@@ -30,7 +53,6 @@ function validateDOB() {
     return true;
 }
 
-// Validation functions
 function validateEmail() {
     const email = emailInput.value.trim();
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -63,6 +85,15 @@ function validatePhone() {
     return true;
 }
 
+function validateGender() {
+    const gender = document.querySelector('input[name="gender"]:checked');
+    if (!gender) {
+        alert('Please select a gender.');
+        return false;
+    }
+    return true;
+}
+
 function validatePassword() {
     const password = passwordInput.value.trim();
     const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
@@ -88,17 +119,32 @@ function validateConfirmPassword() {
 form.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    if (validateEmail() && validateUsername() && validatePhone() && validateDOB() && validatePassword() && validateConfirmPassword()) {
+    if (validateEmail() && validateUsername() && validatePhone() && validateDOB() && validatePassword() && validateConfirmPassword() && validateGender()) {
         const email = emailInput.value.trim();
         const password = passwordInput.value.trim();
+        const name = nameInput.value.trim();
+        const phone = phoneInput.value.trim();
+        const dob = dobInput.value.trim();
+        const username = usernameInput.value.trim();
+        const gender = document.querySelector('input[name="gender"]:checked').value;
 
+        // Register the user with email and password
         createUserWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                const user = userCredential.user;
-                console.log('User registered successfully:', user);
+            .then(async (userCredential) => {
+                const user = userCredential.user;  // Get the registered user's UID
+
+                // Store additional user data in Firestore using the UID
+                await setDoc(doc(db, "users", user.uid), {
+                    username: username,
+                    name: name,
+                    email: email,
+                    phone: phone,
+                    dob: dob,
+                    gender: gender
+                });
 
                 alert('Registration successful!');
-                window.location.href = 'login.html';
+                window.location.href = 'login.html';  // Redirect to login page or wherever appropriate
             })
             .catch((error) => {
                 const errorMessage = error.message;
@@ -107,3 +153,40 @@ form.addEventListener('submit', function(event) {
             });
     }
 });
+
+
+// form.addEventListener('submit', function(event) {
+//     event.preventDefault();
+
+//     if (validateEmail() && validateUsername() && validatePhone() && validateDOB() && validatePassword() && validateConfirmPassword()) {
+//         const email = emailInput.value.trim();
+//         const password = passwordInput.value.trim();
+//         const name = nameInput.value.trim();
+//         const phone = phoneInput.value.trim();
+//         const dob = dobInput.value.trim();
+//         const username = usernameInput.value.trim();
+
+//         createUserWithEmailAndPassword(auth, email, password)
+//             .then(async (userCredential) => {
+//                 const user = userCredential.user;
+//                 console.log('User registered successfully:', user);
+
+//                 // Store additional user data in Firestore
+//                 await setDoc(doc(db, "users", user.uid), {
+//                     username: username,
+//                     name: name,
+//                     email: email,
+//                     phone: phone,
+//                     dob: dob
+//                 });
+
+//                 alert('Registration successful!');
+//                 window.location.href = 'login.html';
+//             })
+//             .catch((error) => {
+//                 const errorMessage = error.message;
+//                 console.error("Error making new account", errorMessage);
+//                 alert(errorMessage);
+//             });
+//     }
+// });
