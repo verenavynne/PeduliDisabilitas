@@ -299,6 +299,7 @@ h3{
     margin-top: 10rem;
     margin-left: 10rem;
     height: 400px;
+    margin-bottom: 10rem;
 }
 
 .cart-content {
@@ -507,3 +508,102 @@ h4{
     margin-bottom: 3rem;
 }
 
+.container{
+	bottom:0;
+	left:0;
+	right:0;
+	max-width: 1170px;
+	margin:auto;
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+ul{
+	list-style: none;
+}
+
+.footer{
+	bottom:0;
+	left:0;
+	right:0;
+	background-color: var(--midnight);
+    padding: 70px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer1{
+   width: 25%;
+   padding: 0 15px;
+}
+
+.footer .row{
+    display: flex;
+    justify-content: center;
+
+}
+.footer1 h4{
+	font-size: 17px;
+	color: var(--white);
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer1 h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: var(--lightblue);
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+
+.footer1 ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+
+.footer1 ul li a{
+	font-size: 15px;
+	text-transform: capitalize;
+	text-decoration: none;
+	font-weight: 300;
+	color: var(--basic);
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer1 ul li a:hover{
+	color: var(--basic);
+	padding-left: 8px;
+}
+
+
+.footer1 .sosmed a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+    align-items: center;
+    justify-content: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+    padding-top:0.3rem;
+}
+.footer1 .sosmed a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+.footer .sosmed .icon{
+    height:20px;
+    width: 20px;
+}
