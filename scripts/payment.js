@@ -33,4 +33,3 @@ document.getElementById("paymentForm").addEventListener("submit", function(event
     alert("Payment information submitted successfully!");
     // Here you can add the functionality to process the payment.
 });
-    
