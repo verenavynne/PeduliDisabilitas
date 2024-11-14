@@ -18,10 +18,10 @@
         <div class="navbar">
             <a class ="headline" href="#">PeduliDisabilitas</a>
             <div class="Menu">
-                <a href="index.html">Home</a>
-                <a href="views/products.html">Products</a>
-                <a href="views/aboutus.html">About Us</a>
-                <a href="views/aboutus.html">Contact Us</a>
+                <a href="../views/home.html">Home</a>
+                <a href="../views/products.html">Products</a>
+                <a href="../views/aboutus.html">About Us</a>
+                <a href="../views/aboutus.html">Contact Us</a>
             </div>
 
             <div class="navbar-extra">
@@ -85,7 +85,7 @@
             <label for="phone">Phone Number (optional)</label>
             <input class="phone1" type="tel" id="phone" name="phone">
 
-            <button class="checkout" type="submit" href="checkout.html">Rp. 27,000</button>
+            <button id="paymentButton" class="payment-button" type="submit" href="checkout.html">Rp. 0</button>
             <p class="secure">Securely safe my information for 1-click checkout</p>
         </form>
     </div>
@@ -128,6 +128,6 @@
    <script>
     feather.replace()
     </script>
-    <script src="/scripts/payment.js"></script>
+    <script type="module" src="../scripts/payment.js"></script>
 </body>
 </html>

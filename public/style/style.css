@@ -466,7 +466,7 @@ body {
     justify-content: center;
     align-items: center;
     max-width: 120rem;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('/public/assets/image/banner-2.jpg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('../assets/image/banner-2.jpg');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 

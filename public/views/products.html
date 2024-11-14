@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
-    <title>Products</title>
+    <title>Products</title> 
 </head>
 <body>
 
@@ -20,10 +20,10 @@
         <div class="navbar">
             <a class ="headline" href="#">PeduliDisabilitas</a>
             <div class="Menu">
-                <a href="/public/views/home.html"  >Home</a>
+                <a href="../views/home.html"  >Home</a>
                 <a href="../views/products.html"  class="active">Products</a>
-                <a href="/public/views/aboutus.html">About Us</a>
-                <a href="/public/views/aboutus.html#contactsec">Contact Us</a>
+                <a href="../views/aboutus.html">About Us</a>
+                <a href="../views/aboutus.html#contactsec">Contact Us</a>
             </div>
 
             <div class="search-bar">
@@ -34,7 +34,7 @@
             <div class="navbar-extra">
                 <a href="#" id="message">
                     <i data-feather="message-circle"></i></a>
-                <a href="#" id="shopping">
+                <a href="../views/cart.html" id="shopping">
                     <i data-feather="shopping-cart"></i></a>
                 <a href="../views/profile.html">
                     <img src="../assets/image/profile-icon.png" alt="">
@@ -75,75 +75,9 @@
 
 
          <!-- product -->
-          <div class="product-grid">
-
-            <a class="product-card" href="../views/productdesc.html">
-                <div class="card-img">
-                    <img src="../assets/image/tas anyaman.png" alt="">
-                </div>
-                <div class="card-txt">
-                    <h4>Tas Anyaman</h4>
-                    <h5>Rp 50.000</h5>
-                    <p>⭐ 4.5 • 8 terjual</p>
-                </div>
-            </a>
-
-            <a class="product-card" href="">
-                <div class="card-img">
-                    <img src="../assets/image/productpage/gelang2.png" alt="">
-                </div>
-                <div class="card-txt">
-                    <h4>Gelang</h4>
-                    <h5>Rp 25.000</h5>
-                    <p>⭐ 4.5 • 15 terjual</p>
-                </div>
-            </a>
-
-            <a class="product-card" href="">
-                <div class="card-img">
-                    <img src="../assets/image/productpage/kain batik.png" alt="">
-                </div>
-                <div class="card-txt">
-                    <h4>Kain Batik</h4>
-                    <h5>Rp 80.000</h5>
-                    <p>⭐ 4.7 • 3 terjual</p>
-                </div>
-            </a>
-
-            <a class="product-card" href="">
-                <div class="card-img">
-                    <img src="../assets/image/productpage/lukisan.png" alt="">
-                </div>
-                <div class="card-txt">
-                    <h4>Lukisan Canvas</h4>
-                    <h5>Rp 450.000</h5>
-                    <p>⭐ 4.6 • 1 terjual</p>
-                </div>
-            </a>
-
-            <a class="product-card" href="">
-                <div class="card-img">
-                    <img src="../assets/image/productpage/patung.png" alt="">
-                </div>
-                <div class="card-txt">
-                    <h4>Patung Bali</h4>
-                    <h5>Rp 120.000</h5>
-                    <p>⭐ 4.3 • 8 terjual</p>
-                </div>
-            </a>
-
-            
-            <a class="product-card" href="../views/form.html">
-                <div class="add-img">
-                    <img src="../assets/image/bx-image-add.svg" alt="">
-                </div>
-                <div class="add-txt">
-                    <h4>Add Product</h4>
-                </div>
-            </a>
-
+          <div class="product-grid" id="productGrid">
+            <!-- Product From Database -->
           </div>
-          
      </section>
     
 
@@ -187,7 +121,7 @@
         feather.replace()
     </script>
 
-    <script src="scripts/script.js">
+    <script type="module" src="../scripts/script.js">
     </script>
     
 </body>

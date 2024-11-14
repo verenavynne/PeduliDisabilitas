@@ -20,10 +20,10 @@
         <div class="navbar">
             <a class ="headline" href="#">PeduliDisabilitas</a>
             <div class="Menu">
-                <a href="index.html">Home</a>
-                <a href="views/products.html">Products</a>
-                <a href="views/aboutus.html">About Us</a>
-                <a href="views/aboutus.html">Contact Us</a>
+                <a href="../views/home.html">Home</a>
+                <a href="../views/products.html">Products</a>
+                <a href="../views/aboutus.html">About Us</a>
+                <a href="../views/aboutus.html">Contact Us</a>
             </div>
 
             <div class="search-bar">
@@ -60,47 +60,21 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="product-info">
-                            <button class="remove-btn">✖</button>
-                            <img src="/assets/image/gelang.png" alt="Gelang Tali">
-                            <span>Gelang Tali</span>
-                        </td>
-                        <td>Rp20.000,-</td>
-                        <td class="quantity">
-                            <button class="quantity-btn" onclick="updateQuantity(-1, 0)">-</button>
-                            <input type="text" value="1" class="quantity-input" id="quantity0" onchange="updateCart()">
-                            <button class="quantity-btn" onclick="updateQuantity(1, 0)">+</button>
-                        </td>
-                        <td class="sub-total" id="subtotal0">Rp20.000,-</td>
-                    </tr>
-                    <tr>
-                        <td class="product-info">
-                            <button class="remove-btn">✖</button>
-                            <img src="/assets/image/kain batik.png" alt="Kain Batik">
-                            <span>Kain Batik</span>
-                        </td>
-                        <td>Rp150.000,-</td>
-                        <td class="quantity">
-                            <button class="quantity-btn" onclick="updateQuantity(-1, 1)">-</button>
-                            <input type="text" value="3" class="quantity-input" id="quantity1" onchange="updateCart()">
-                            <button class="quantity-btn" onclick="updateQuantity(1, 1)">+</button>
-                        </td>
-                        <td class="sub-total" id="subtotal1">Rp450.000,-</td>
-                    </tr>
+                       <!-- Product Cart -->
                 </tbody>
             </table>
             <div class="cart-buttons">
-                <button class="btn return-btn"><a class="return" href="products.html">Return to Shop</a></button>
+                <button class="btn return-btn"><a class="return" href="../views/products.html">Return to Shop</a></button>
             </div>
         </div>
         <div class="cart-sidebar">
             <div class="card-totals">
                 <h3 class="cart-total">Cart Totals</h3>
-                <p>Sub-total <span id="subtotal">Rp470.000,-</span></p>
+                <p>Sub-total <span id="subtotal">Rp0-</span></p>
                 <p>Shipping <span>Free</span></p>
                 <p>Discount <span>Rp0</span></p>
-                <p>Tax <span id="tax">Rp47.000,-</span></p>
-                <h4>Total <span id="total">Rp517.000,-</span></h4>
+                <p>Tax <span id="tax">Rp0-</span></p>
+                <h4>Total <span id="total">Rp0-</span></h4>
                 <a class="co" href="payment.html">Proceed to Checkout</a>
             </div>
             <div class="coupon">
@@ -148,6 +122,6 @@
     <script>
         feather.replace()
     </script>
-    <script src="/scripts/cart.js"></script>
+    <script type="module" src="../scripts/cart.js"></script>
 </body>
 </html>

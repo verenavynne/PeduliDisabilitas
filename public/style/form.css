@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --white: #FFFFFF;
+    --basic: #E9F6FF;
+    --lightblue: #9CD5FF;
+    --midnight: #291D89;
+    --primaryFont: 'Poppins', serif;
+    --secondaryFont: 'Lora', serif;
+}
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    position: fixed;
+    background-color:rgb(255, 255, 255, 0.7);
+    border-bottom: 1px solid var(--basic);
+    top:0;
+    left:0;
+    right:0;
+    z-index:9999;
+  
+}
+
+.navbar .headline{
+    font-family: var(--primaryFont);
+    font-size: 35px;
+    color: var(--midnight);
+}
+
+.navbar .img{
+    width: 425px ;
+    height: auto;
+    
+
+}
+
+.navbar .Menu a{
+    display: inline-block;
+    margin: 0 1rem;
+    color:black;
+    font-family: var(--secondaryFont);
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.Menu a.active{
+    color: #73bcf1;
+}
+
+.Menu a::after{
+    content: ""; 
+    position: absolute; 
+    left: 0; 
+    bottom: 0; 
+    height: 2px; 
+    width: 100%; 
+    background: var(--lightblue); 
+    transform: scaleX(0); 
+    transition: transform 0.3s ease;
+
+}
+
+.Menu a:hover::after{
+    transform: scaleX(1);
+}
+
+.navbar-extra a{
+    color:black;
+    margin:0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-extra a:hover{
+    color:var(--lightblue);
+
+}
+
+.navbar-extra img{
+    height: 35px;
+    width: auto;
+    border-radius: 80px;
+}
+
+#hamburger{
+    display:none;
+}
+
+.search-bar {
+    position: relative;
+    max-width: 500px;
+}
+
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 10px 40px 10px 15px; 
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    font-size: 14px;
+}
+
+
+.search-bar .icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 14px;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--basic);
+    font-family: var(--secondaryFont);
+    margin: 0;
+}
+
+.form-container {
+    background-color: var(--white);
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    font-family: var(--primaryFont);
+    font-size: 24px;
+    color: var(--midnight);
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--midnight);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="url"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--lightblue);
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 16px;
+    outline: none;
+    font-family: var(--secondaryFont);
+    color: var(--midnight);
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="url"]:focus,
+textarea:focus {
+    border-color: var(--midnight);
+    box-shadow: 0 0 5px rgba(41, 29, 137, 0.3);
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: var(--lightblue);
+    color: var(--midnight);
+    font-size: 16px;
+    font-family: var(--primaryFont);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--midnight);
+    color: var(--white);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid var(--basic);
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .headline {
+    font-family: var(--primaryFont);
+    font-size: 35px;
+    color: var(--midnight);
+}
+
+.search-bar {
+    position: relative;
+    max-width: 500px;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    font-size: 14px;
+}
+
+.search-bar .icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 14px;
+}
