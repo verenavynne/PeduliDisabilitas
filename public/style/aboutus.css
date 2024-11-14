@@ -204,13 +204,12 @@ body {
 
 .contact-us{
     background-color: var(--lightblue);
+    padding: 4rem;
 }
 
 .contact{
     justify-content: space-between;
- 
-    padding:8rem;
-    padding-bottom: 4rem;
+    padding: 2rem;
     display:block;
     position:relative;
     align-items: center;
@@ -218,37 +217,38 @@ body {
 }
 
 .headline-contact{
-    font-size: 50px;
-    font-family:NewYork;
-    color:black;
+    font-size: 40px;
+    font-family:var(--primaryFont);
+    color:var(--midnight);
+    font-weight: 500;
     padding-bottom: 2rem;
 }
 
 .headline-desc{
-    font-family: "Gotham Pro";
-    font-size: 17px;
+    font-family: var(--secondaryFont);
+    font-size: 20px;
     color:black;
 
 }
 
 .req{
- 
+
     align-items: center;
     text-align: left;
     justify-content: left;
     padding-left: 20%;
     display:flex;
     position:relative;
-    font-size: 17px;
-    font-family: "Gotham Pro";
+    font-size: 16px;
+    font-family: var(--secondaryFont);
     padding-bottom: 2rem;
 
 }
 
 .fullname-text{
     display:flex;
-    font-size: 17px;
-    font-family: "Gotham Pro";
+    font-size: 16px;
+    font-family: var(--secondaryFont);
     padding-bottom: 0.5rem;
     
 }
@@ -271,6 +271,8 @@ form{
     flex-direction: column;
     width:130%;
     margin-top: 0.5rem;
+    border-radius: 10px;
+    border: 1px var(--midnight);
 }
 
 .formmess{
@@ -278,14 +280,19 @@ form{
     flex-direction: column;
     width:130%;
     margin-top: 0.5rem;
+    border-radius: 10px;
+    border: 1px var(--midnight);
+    
 }
 
 .formmess > input{
     height:100px;
     width:100%;
     padding-inline: 0.5rem;
-    font-family: "Gotham Pro";
+    font-family: var(--secondaryFont);
     font-size: 15px;
+    border-radius: 10px;
+    border: 1px var(--midnight);
 
 }
 
@@ -293,8 +300,10 @@ form{
     height:40px;
     width:100%;
     padding-inline: 0.5rem;
-    font-family: "Gotham Pro";
+    font-family: var(--secondaryFont);
     font-size: 15px;
+    border-radius: 10px;
+    border: 1px var(--midnight);
 }
 
 
@@ -303,8 +312,10 @@ form{
     height:40px;
     width:100%;
     padding-inline: 0.5rem;
-    font-family: "Gotham Pro";
+    font-family: var(--secondaryFont);
     font-size: 15px;
+    border-radius: 10px;
+    border: 1px var(--midnight);
 
 }
 
@@ -317,37 +328,45 @@ form{
     text-align: left;
     padding-top: 1rem;
     column-gap: 1rem;
+    border-radius: 10px;
+    border: 1px var(--midnight);
 }
 
 .formagree > input{
     height:20px;
     width: 20px;
+    border-radius: 10px;
+    border: 1px var(--midnight);
 }
 
 .yes{
-    font-family: "Gotham Pro";
+    font-family: var(--secondaryFont);
     font-size: 15px;
     display:flex;
     align-items: left;
     /* width:150%; */
+    border-radius: 10px;
+    border: 1px var(--midnight);
   
 }
 
 
 #submit-button{
-    background-color: #26261F;
+    background-color: var(--midnight);
     color:white;
     padding:14px;
-    font-size: 17px;
-    font-family: "Gotham Pro";
+    font-size: 16px;
+    font-family: var(--secondaryFont);
     width:100%;
     cursor: pointer;
     margin-top:1rem;
+    border-radius: 20px;
 }
 
 #submit-button:hover{
-    background-color: #806554;
-    border-color: #806554;
+    background-color: var(--basic);
+    border-color: var(--midnight);
+    color: var(--midnight);
  
 }
 

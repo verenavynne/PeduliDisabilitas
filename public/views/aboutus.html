@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="stylesheet" href="/style/aboutus.css">
+    <link rel="stylesheet" href="/public/style/aboutus.css">
+    <link rel="stylesheet" href="/public/style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -17,10 +17,10 @@
         <div class="navbar">
             <a class ="headline" href="#">PeduliDisabilitas</a>
             <div class="Menu">
-                <a href="/index.html" >Home</a>
+                <a href="/public/views/home.html" >Home</a>
                 <a href="views/products.html">Products</a>
-                <a href="views/aboutus.html" class="active">About Us</a>
-                <a href="views/aboutus.html">Contact Us</a>
+                <a href="/public/views/aboutus.html" class="active">About Us</a>
+                <a href="/public/views/aboutus.html#contactsec">Contact Us</a>
             </div>
 
             <div class="search-bar">
@@ -33,8 +33,8 @@
                     <i data-feather="message-circle"></i></a>
                 <a href="#" id="shopping">
                     <i data-feather="shopping-cart"></i></a>
-                <a href="#">
-                    <img src="assets/image/profile-icon.png" alt="">
+                <a href="/public/views/profile.html">
+                    <img src="/public/assets/image/profile-icon.png" alt="">
                 </a>
                 <a href="#" id="hamburger">
                     <i data-feather="menu"></i>
@@ -136,16 +136,16 @@
             </div>
         </div>
 
-
-        <div class="contact-us">
+        <div class="contact-us" id="contactsec">
             <div class="contact">
                 <p class="headline-contact">Contact Us</p>
-                <p class="headline-desc">If you have any question regarding a particular watch, our team is more than happy to assist you.</p>
+                <p class="headline-desc">If you have any question regarding a particular things, our team is more than happy to assist you.</p>
                 <p class="headline-desc">
                     Reach out to us and we will provide the information that you need.
                 </p>
             </div>
- 
+        
+
         
             <form id="form-contactus">
                 <div class="formfield">
@@ -422,11 +422,11 @@
         
                 <div class="formmess" >
                     <label for="message" class="fullname-text">Message<p style="color: red;">*</p></label>
-                    <input type="text" id="message" name="message">
+                    <input type="text" id= "message2" name="message">
                 </div>
         
                 <div class="formagree" id="iagree">
-                    <label  class="yes"for="agree" >Yes, I’d like to receive emails for WatcHGoods promotions and products.</label>
+                    <label  class="yes"for="agree" >Yes, I’d like to receive emails for PeduliDisabilitas promotions and products.</label>
                     <input class="check"type="checkbox" id="agree" name="agree">
                 </div>
         
@@ -434,9 +434,11 @@
         
             </form>
         </div>
-    </main>
+       
+        
+    </main> 
 
-    <!-- <footer class="footer">
+    <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="footer1">
@@ -468,14 +470,14 @@
                 </div>
             </div>
         </div>
-   </footer> -->
+   </footer>
     
     <script>
         feather.replace()
     </script>
 
-    <script src="/scripts/contactus.js"></script>
-    <script src="/scripts/script.js">
+    <script src="/public/scripts/contact.js"></script>
+    <script src="/public/scripts/script.js">
     </script>
 </body>
 </html>

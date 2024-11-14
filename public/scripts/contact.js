@@ -6,11 +6,12 @@ document.getElementById('form-contactus').addEventListener('submit',(Event)=>{
     const email = document.getElementById('email').value
     const number= document.getElementById('phonenum').value
     let country = document.getElementById('country').value
-    const message = document.getElementById('message').value
+    const message = document.getElementById('message2').value
     const agree = document.getElementById('agree').checked
 
-    
-    
+    console.log("Message content:", message); // Debugging line
+    console.log(document.getElementById('message'));
+
 
     var fullNamePattern = /^[A-Za-z\s]+$/;
 
@@ -56,4 +57,8 @@ document.getElementById('form-contactus').addEventListener('submit',(Event)=>{
 
 
     alert('Message has been submitted')
+
+    document.getElementById('form-contactus').reset();
+
+    return true;
 })
