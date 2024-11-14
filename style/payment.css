@@ -478,14 +478,10 @@ ul{
     border-radius: 8px;
     cursor: pointer;
     background-color: #9CD5FF;
-    padding: 10px 150px;
-    margin-left: 2rem;
-}
-#phone{
-    margin-bottom: 2rem;
+    padding-top: -2rem;
 }
 .secure{
     font-size: 11px;
-    padding-top: 1.5rem;
-    margin-left: 5.2rem;
+    padding-top: 1rem;
+    margin-left: 6rem;
 }
