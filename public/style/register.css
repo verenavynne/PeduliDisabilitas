@@ -13,7 +13,7 @@
     display: grid;
   }
   body::before{
-    background-image: url(../assets/image/background.jpg);
+    background-image: url("../assets/image/background.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 90%;
@@ -39,7 +39,7 @@
     padding-left: 1rem;
     margin-top: 0.5rem;
   }
-  .login {
+  .register {
     background: rgba(255, 255, 255, 0.9);
     padding: 40px;
     border-radius: 10px;
@@ -48,24 +48,25 @@
     max-width: 400px;
   }
   
-  .login-form {
+  .register-form {
     margin-top: 3rem;
     font-family: "Lora", serif;
     font-optical-sizing: auto;
     font-style: normal;
     display: flex;
     flex-direction: column;
-    height: 25rem;
+    height: 48rem;
     width: 30rem;
     border-radius: 20px;
     background-color: white;
     margin-left: 30rem;
     opacity: 0.95;
+    padding-bottom: 2rem;
     padding-left: 3rem;
     padding-right: 3rem;
   }
   
-  .login-form h2 {
+  .register-form h2 {
     text-align: center;
     margin-bottom: 10px;
     font-size: 30px;
@@ -98,7 +99,7 @@
     border-color: #9b59b6;
     outline: none;
   }
-  .log {
+  .reg {
     font-family: "Lora", serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -127,3 +128,29 @@
     text-decoration: none;
   }
   
+.gender-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 9px;
+    padding-right: 5rem;
+}
+
+.gender-group label[for="gender"] {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+label[for="gender"]{
+    margin-top: 0.5rem;
+}
+.gender-group input[type="radio"] {
+    transform: scale(0.5);
+    align-items: center;
+}
+
+.gender-group label[for="male"], 
+.gender-group label[for="female"] {
+    font-size: 14px;
+    margin-right: 20px;
+    display: inline; 
+}
