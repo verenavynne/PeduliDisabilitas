@@ -3,9 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/product.css">
+    <link rel="stylesheet" href="../scripts/product.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Products</title>
 </head>
 <body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="navbar">
+            <a class ="headline" href="#">PeduliDisabilitas</a>
+            <div class="Menu">
+                <a href="../index.html" class="active">Home</a>
+                <a href="../views/products.html">Products</a>
+                <a href="../views/aboutus.html">About Us</a>
+                <a href="../views/aboutus.html">Contact Us</a>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Type to search...">
+                <i class="search icon"data-feather="search"></i>
+            </div>
+
+            <div class="navbar-extra">
+                <a href="#" id="message">
+                    <i data-feather="message-circle"></i></a>
+                <a href="#" id="shopping">
+                    <i data-feather="shopping-cart"></i></a>
+                <a href="#">
+                    <img src="assets/image/profile-icon.png" alt="">
+                </a>
+                <a href="#" id="hamburger">
+                    <i data-feather="menu"></i>
+                </a>
+            </div>
+           
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+     <section class="catalog-container">
+
+        <!-- sidebar -->
+         <aside class="sidebar" id="sidebar">
+            <div class="sidebar-catalog">
+                <p>Main / Catalog</p>
+                <h2>Catalog</h2>
+            </div>
+
+            <div class="sidebar-category">
+                <h3>Category</h3>
+                <ul>
+                    <li>Foods</li>
+                    <li>Drinks</li>
+                    <li>Accessories</li>
+                    <li>Clothes</li>
+                    <li>Paintings</li>
+                    <li>Handcrafts</li>
+                    <li>Batik</li>
+                </ul>
+            </div>
+
+            <p class="sidebar-txt">Your Happiness is Our Pleasure</p>
+         </aside>
+
+
+         <!-- product -->
+          <div class="product-grid">
+
+            <a class="product-card" href="../views/productdesc.html">
+                <div class="card-img">
+                    <img src="../assets/image/gelang1.png" alt="">
+                </div>
+                <div class="card-txt">
+                    <h4>Tas Anyaman</h4>
+                    <h5>Rp 50.000</h5>
+                    <p>⭐ 4.5 • 8 terjual</p>
+                </div>
+            </a>
+
+            <a class="product-card" href="">
+                <div class="card-img">
+                    <img src="../assets/image/gelang2.png" alt="">
+                </div>
+                <div class="card-txt">
+                    <h4>Tas Anyaman</h4>
+                    <h5>Rp 50.000</h5>
+                    <p>⭐ 4.5 • 8 terjual</p>
+                </div>
+            </a>
+
+            <a class="product-card" href="">
+                <div class="card-img">
+                    <img src="../assets/image/kain.png" alt="">
+                </div>
+                <div class="card-txt">
+                    <h4>Tas Anyaman</h4>
+                    <h5>Rp 50.000</h5>
+                    <p>⭐ 4.5 • 8 terjual</p>
+                </div>
+            </a>
+
+            <a class="product-card" href="">
+                <div class="card-img">
+                    <img src="../assets/image/lukisan.png" alt="">
+                </div>
+                <div class="card-txt">
+                    <h4>Tas Anyaman</h4>
+                    <h5>Rp 50.000</h5>
+                    <p>⭐ 4.5 • 8 terjual</p>
+                </div>
+            </a>
+
+            <a class="product-card" href="">
+                <div class="card-img">
+                    <img src="../assets/image/patung.png" alt="">
+                </div>
+                <div class="card-txt">
+                    <h4>Tas Anyaman</h4>
+                    <h5>Rp 50.000</h5>
+                    <p>⭐ 4.5 • 8 terjual</p>
+                </div>
+            </a>
+
+            
+            <a class="product-card" href="../views/form.html">
+                <div class="add-img">
+                    <img src="../assets/image/bx-image-add.svg" alt="">
+                </div>
+                <div class="add-txt">
+                    <h4>Add Product</h4>
+                </div>
+            </a>
+
+          </div>
+          
+     </section>
+    
+
+    <!-- FOOTER -->
     
 </body>
 </html>

@@ -16,9 +16,10 @@
 
 body {
     background-color: var(--white);
-    font-family: var(--secondaryFont);
-    
+    height: fit-content;
 }
+
+/* navbar */
 
 .navbar{
     display:flex;
@@ -217,4 +218,45 @@ body {
     html{
         font-size:55%;
     }
+}
+
+
+/* MAIN */
+
+.product{
+    display: flex;
+    padding: 2rem;
+    margin-top: 10%;
+    font-family: var(--primaryFont);
+}
+
+.product-img-slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+
+.product-img-slider img{
+    max-width: 300px;
+    border-radius: 8px;
+    margin: 0 0.5em;
+}
+
+.product-details{
+    flex: 1;
+    margin-left: 2rem;
+}
+
+.price{
+}
+
+.action-button{
+    margin-top: 1rem;
+    /* display: flex; */
+}
+
+.action-button button{
+    background-color: #291D89;
+    border: none;
 }
