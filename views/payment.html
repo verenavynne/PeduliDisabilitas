@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link rel="stylesheet" href="../style/profile.css">
+    <title>Payment</title>
+    <link rel="stylesheet" href="../style/payment.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
@@ -24,11 +24,6 @@
                 <a href="views/aboutus.html">Contact Us</a>
             </div>
 
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Type to search...">
-                <i class="search icon"data-feather="search"></i>
-            </div>
-
             <div class="navbar-extra">
                 <a href="chat.html" id="message">
                     <i data-feather="message-circle"></i></a>
@@ -43,53 +38,55 @@
             </div>
         </div>
     </nav>
-    <div class="profile-container">
 
-        <div class="sidebar">
-            <img src="../assets/image/profile-pict.jpg" alt="Profile Picture" class="profile-picture">
-            <div class="upload-section">
-                <p>Do you want to upload your products?</p>
-                <button class="upload-button"><a class="upload" href="Product.html">Upload</a></button>
-            </div>
-        </div>
+    <div class="payment-container">
+        <form class="payment-form" id="paymentForm">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
 
-        <div class="profile-details">
-            <div class="header">
-                <h2>My Profile</h2>
-                <button class="logout-button"><a class="logout" href="login.html">Log Out</a></button>
-            </div>
-
-            <div class="details">
-                <div class="detail-item">
-                    <label>Username</label>
-                    <input type="text" value="thomas_05104" disabled>
+            <label for="card-info">Card Information</label>
+            <div class="card-info">
+                <div class="card-number-container">
+                    <input type="text" id="card-number" name="card-number" placeholder="Card Number" required>
+                    <span class="card-logo">VISA</span>
                 </div>
-                <div class="detail-item">
-                    <label>Name</label>
-                    <input type="text" value="Thomas Ardian" disabled>
-                </div>
-                <div class="detail-item">
-                    <label>Email</label>
-                    <input type="email" value="thomas.ardian@gmail.com" disabled>
-                </div>
-                <div class="detail-item">
-                    <label>Phone Number</label>
-                    <input type="tel" value="081273649873" disabled>
-                </div>
-                <div class="detail-item">
-                    <label>Date of Birth</label>
-                    <input type="text" value="20 September 2000" disabled>
-                </div>
-                <div class="detail-item">
-                    <label>Gender</label>
-                    <input type="text" value="Laki - Laki" disabled>
-                </div>
-                <div class="detail-item">
-                    <label>Password</label>
-                    <input type="password" value="***********" disabled>
+                <div class="expiry-cvc">
+                    <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+                    <input type="text" id="cvc" name="cvc" placeholder="CVC" required>
                 </div>
             </div>
-        </div>
+
+            <label for="cardholder-name">Cardholder Name</label>
+            <input type="text" id="cardholder-name" name="cardholder-name" required>
+
+            <label for="country">Region</label>
+            <select id="country" name="country" required>
+                <option value="">Select Region</option>
+                <option value="JI">Jakarta, Indonesia</option>
+                <option value="WJ">West Java, Indonesia</option>
+                <option value="EJ">East Java, Indonesia</option>
+                <option value="CJ">Central Java, Indonesia</option>
+                <option value="MS">West Sumatera, Indonesia</option>
+                <option value="MS">East Sumatera, Indonesia</option>
+                <option value="MS">South Sumatera, Indonesia</option>
+                <option value="MS">North Sumatera, Indonesia</option>
+                <option value="MS">South Kalimantan, Indonesia</option>
+                <option value="MS">North Kalimantan, Indonesia</option>
+                <option value="MS">East Kalimantan, Indonesia</option>
+                <option value="MS">West Kalimantan, Indonesia</option>
+                <option value="MS">West Sulawesi, Indonesia</option>
+                <option value="MS">South Sulawesi, Indonesia</option>
+                <option value="MS">North Sulawesi, Indonesia</option>
+                <option value="MS">Central Sulawesi, Indonesia</option>
+                <option value="MS">Southeast Sulawesi, Indonesia</option>
+                <!-- Add more countries as needed -->
+            </select>
+
+            <label for="phone">Phone Number (optional)</label>
+            <input type="tel" id="phone" name="phone">
+
+            <button type="submit">Rp. 27,000</button>
+        </form>
     </div>
 
     <footer class="footer">
@@ -127,9 +124,9 @@
    </footer>
 
 
-    <script>
-        feather.replace()
+   <script>
+    feather.replace()
     </script>
-    <script src="profile.js"></script>
+    <script src="/scripts/payment.js"></script>
 </body>
 </html>

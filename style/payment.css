@@ -266,244 +266,201 @@ body {
     }
 }
 
-.shop-cart{
-    width: 100%;
-    height: 50px;
-    background-color: #F2F4F5;
+.payment-sect{
     margin-top: 5rem;
-    display: flex;
-    gap: 20px;
+    background-color: red;
+    height: 1000px;
+}
 
-}
-i{
-    margin-top: 1rem;
-    size: 50px;
-    padding-left: 10rem;
-}
-h3{
-    margin-right: -10rem;
-    margin-top: 0.9rem;
-    font-family: "Lora", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-}
-.shop{
-    color: #2DA5F3;
-}
-.cart-container {
-    display: flex;
-    gap: 20px;
-    width: 80%;
+.payment-container {
+    width: 500px;
+    border: 1px solid #cfd9e2;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
     margin-top: 10rem;
-    margin-left: 10rem;
-    height: 400px;
-}
-
-.cart-content {
-    width: 60%;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-h2{
-    padding: 1rem;
-}
-.cart-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
-
-.cart-table th, .cart-table td {
-    padding: 15px;
-    text-align: center;
-    border-bottom: 1px solid #e0e0e0;
-    vertical-align: middle;
-    height: 70px;
-}
-
-.cart-table th {
-    background-color: #f1f1f1;
-    font-weight: 600;
-}
-
-.product-info {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-top: 1rem;
-}
-
-.product-info img {
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-}
-
-.quantity {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.quantity-btn {
-    background-color: #ddd;
-    border: none;
-    padding: 5px 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.quantity-input {
-    width: 40px;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 5px;
-}
-
-.cart-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 3rem;
-    margin-left: 2rem;
-}
-
-.cart-sidebar {
-    width: 35%;
-    margin-left: 20px;
-}
-
-.card-totals, .coupon {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem;
-}
-.card-totals{
-    height: 320px;
-}
-.cart-total{
-    font-size: 20px;
-    font-weight: 600;
-    padding-bottom: 1rem;
-}
-.card-totals h3, .coupon h3 {
-    margin-bottom: 10px;
-}
-
-.card-totals p, .card-totals h4 {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-.btn{
-    /* padding: 10px 20px; */
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    font-family: "Lora", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
-.btn .return{
-    background-color: white;
-}
-.remove-btn{
-    /* padding: ; */
-    border-radius: 50%;
-    height: 20px;
-    width: 20px;
-    background-color: white;
-    cursor: pointer;
-}
-.coupon {
-    height: 200px;
-    width: 430px;
+    margin-left: 30rem;
     margin-bottom: 2rem;
 }
 
-.coupon h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    font-weight: normal;
-    font-family: "Lora", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+.payment-form label {
+    display: block;
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #333;
 }
 
-.coupon input[type="email"] {
-    padding: 12px;
-    font-size: 14px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    outline: none;
+.payment-form input[type="email"],
+.payment-form input[type="text"],
+.payment-form input[type="tel"],
+.payment-form select {
     width: 100%;
+    padding: 10px;
+    font-size: 14px;
     margin-bottom: 10px;
-    font-family: "Lora", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    margin-right: -10rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.coupon-btn {
-    padding: 12px;
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-number-container {
+    position: relative;
+    width: 100%;
+}
+
+.card-number-container input[type="text"] {
+    width: 100%;
+    padding-right: 50px;
+}
+
+.card-logo {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 14px;
+    color: #3a77d2; /* VISA logo color */
+    font-weight: bold;
+}
+
+.expiry-cvc {
+    display: flex;
+    gap: 10px;
+}
+
+.expiry-cvc input[type="text"] {
+    flex: 1;
+}
+
+.card-info input[type="text"] {
+    flex: 1;
+}
+
+.payment-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
     color: #fff;
-    background-color: #007bff;
+    background-color: #4da6ff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: 190px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family: "Lora", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+    margin-top: 15px;
 }
 
-.coupon-btn:hover {
-    background-color: #0069d9;
-}
-.return-btn .return{
-    font-family: "Lora", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: 500;
-    text-decoration: none;
-    font-size: 13px;
-    color: #2DA5F3;
-    border: 1px solid #2DA5F3;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 15px;
-    padding: 0.5rem;
-    width: 100px;
-}
-h4{
-    padding-bottom: 2rem;
-}
-.co{
-    font-family: "Lora", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-weight: 500;
-    text-decoration: none;
-    font-size: 15px;
-    color: white;
-    border: 1px solid #2DA5F3;
-    border-radius: 8px;
-    cursor: pointer;
-    background-color: #291D89;
-    padding: 10px 100px;
-    margin-left: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
+.payment-form button:hover {
+    background-color: #399ae3;
 }
 
+.payment-form .note {
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 10px;
+}
+
+.container{
+	bottom:0;
+	left:0;
+	right:0;
+	max-width: 1170px;
+	margin:auto;
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+ul{
+	list-style: none;
+}
+
+.footer{
+	bottom:0;
+	left:0;
+	right:0;
+	background-color: var(--midnight);
+    padding: 70px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer1{
+   width: 25%;
+   padding: 0 15px;
+}
+
+.footer .row{
+    display: flex;
+    justify-content: center;
+
+}
+.footer1 h4{
+	font-size: 17px;
+	color: var(--white);
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer1 h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: var(--lightblue);
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+
+.footer1 ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+
+.footer1 ul li a{
+	font-size: 15px;
+	text-transform: capitalize;
+	text-decoration: none;
+	font-weight: 300;
+	color: var(--basic);
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer1 ul li a:hover{
+	color: var(--basic);
+	padding-left: 8px;
+}
+
+
+.footer1 .sosmed a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+    align-items: center;
+    justify-content: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+    padding-top:0.3rem;
+}
+.footer1 .sosmed a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+.footer .sosmed .icon{
+    height:20px;
+    width: 20px;
+}
