@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link rel="stylesheet" href="../style/profile.css">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../style/checkout.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
@@ -12,7 +12,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
-    <script type="module" src="../scripts/profile.js"></script>
 </head>
 <body>
     <nav>
@@ -23,11 +22,6 @@
                 <a href="views/products.html">Products</a>
                 <a href="views/aboutus.html">About Us</a>
                 <a href="views/aboutus.html">Contact Us</a>
-            </div>
-
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Type to search...">
-                <i class="search icon"data-feather="search"></i>
             </div>
 
             <div class="navbar-extra">
@@ -44,50 +38,18 @@
             </div>
         </div>
     </nav>
-    <div class="profile-container">
 
-        <div class="sidebar">
-            <img src="../assets/image/profile-pict.jpg" alt="Profile Picture" class="profile-picture">
-            <div class="upload-section">
-                <p>Do you want to upload your products?</p>
-                <button class="upload-button"><a class="upload" href="Product.html">Upload</a></button>
-            </div>
+    <div class="checkout-container">
+        <div class="icon1">
+          <span>&#10004;</span>
         </div>
-
-        <div class="profile-details">
-            <div class="header">
-                <h2>My Profile</h2>
-                <button class="logout-button"><a class="logout" href="login.html">Log Out</a></button>
-            </div>
-
-            <div class="details">
-                <div class="detail-item">
-                    <label>Username</label>
-                    <input type="text" id="username" disabled>
-                </div>
-                <div class="detail-item">
-                    <label>Name</label>
-                    <input type="text" id="name" disabled>
-                </div>
-                <div class="detail-item">
-                    <label>Email</label>
-                    <input type="email" id="email" disabled>
-                </div>
-                <div class="detail-item">
-                    <label>Phone Number</label>
-                    <input type="tel" id="phone" disabled>
-                </div>
-                <div class="detail-item">
-                    <label>Date of Birth</label>
-                    <input type="text" id="dob" disabled>
-                </div>
-                <div class="detail-item">
-                    <label>Gender</label>
-                    <input type="text" id="gender" disabled>
-                </div>
-            </div>
+        <h2>Your order is successfully placed</h2>
+        <p>Thank you for shopping! <br>Your order will we deliver tomorrow.</p>
+        <div class="buttons">
+            <a href="home.html" class="dashboard-btn">Go to Dashboard</a>
+            <a href="home.html" class="order-btn">View Order</a>
         </div>
-    </div>
+      </div>
 
     <footer class="footer">
         <div class="container">
@@ -124,8 +86,9 @@
    </footer>
 
 
-    <script>
-        feather.replace()
+   <script>
+    feather.replace()
     </script>
+    <script src="/scripts/checkout.js"></script>
 </body>
 </html>
