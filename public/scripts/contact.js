@@ -62,3 +62,44 @@ document.getElementById('form-contactus').addEventListener('submit',(Event)=>{
 
     return true;
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+    const aboutLink = document.getElementById("about");
+    const contactLink = document.getElementById("contact");
+
+    function applyActiveClass() {
+        const currentUrl = window.location.href;
+
+        aboutLink.classList.remove("active");
+        contactLink.classList.remove("active");
+
+        
+        if (currentUrl.includes("#contactsec")) {
+            contactLink.classList.add("active"); 
+        } else if (currentUrl.includes("aboutus.html")) {
+            aboutLink.classList.add("active"); 
+        }
+
+    }
+
+    
+    applyActiveClass();
+
+    
+    aboutLink.addEventListener("click", (event) => {
+        event.preventDefault();
+        applyActiveClass(); 
+        window.location.href = aboutLink.getAttribute("href"); 
+    });
+
+    contactLink.addEventListener("click", (event) => {
+        event.preventDefault();
+        applyActiveClass(); 
+        window.location.href = contactLink.getAttribute("href"); 
+    });
+
+
+    window.addEventListener("hashchange", () => {
+        applyActiveClass(); 
+    });
+});

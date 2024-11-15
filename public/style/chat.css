@@ -22,7 +22,7 @@ body {
 }
 
 .container{
-    padding-top: 6%;
+    padding-top: 5.3%;
     display:flex;
     flex-direction: row;
     margin: 0;
@@ -272,8 +272,8 @@ body {
 }
 
 .navbar .headline{
-    font-family: var(--primaryFont);
-    font-size: 35px;
+    font-family: var(--secondaryFont);
+    font-size: 30px;
     color: var(--midnight);
 }
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment</title>
     <link rel="stylesheet" href="../style/payment.css">
+    <link rel="stylesheet" href="../style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
@@ -18,24 +19,30 @@
         <div class="navbar">
             <a class ="headline" href="#">PeduliDisabilitas</a>
             <div class="Menu">
-                <a href="../views/home.html">Home</a>
+                <a href="../views/home.html"  >Home</a>
                 <a href="../views/products.html">Products</a>
-                <a href="../views/aboutus.html">About Us</a>
-                <a href="../views/aboutus.html">Contact Us</a>
+                <a href="../views/aboutus.html" id="about">About Us</a>
+                <a href="../views/aboutus.html#contactsec" id="contact">Contact Us</a>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Type to search...">
+                <i class="search icon"data-feather="search"></i>
             </div>
 
             <div class="navbar-extra">
-                <a href="chat.html" id="message">
+                <a href="../views/chat.html" id="message">
                     <i data-feather="message-circle"></i></a>
-                <a href="cart.html" id="shopping">
+                <a href="../views/cart.html" id="shopping">
                     <i data-feather="shopping-cart"></i></a>
-                <a href="profile.html">
-                    <img src="/assets/image/profile-pict.jpg" alt="" class="profile">
+                <a href="../views/profile.html">
+                    <img src="../assets/image/profile-icon.png" alt="">
                 </a>
                 <a href="#" id="hamburger">
                     <i data-feather="menu"></i>
                 </a>
             </div>
+           
         </div>
     </nav>
 
@@ -128,6 +135,7 @@
    <script>
     feather.replace()
     </script>
+        <script src="/public/scripts/contact.js"></script>
     <script type="module" src="../scripts/payment.js"></script>
 </body>
 </html>

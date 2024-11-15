@@ -17,9 +17,6 @@
 body {
     background-color: var(--white);
     font-family: var(--secondaryFont);
-    font-family: "Lora", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
 }
 
 .navbar{
@@ -38,8 +35,8 @@ body {
 }
 
 .navbar .headline{
-    font-family: var(--primaryFont);
-    font-size: 35px;
+    font-family: var(--secondaryFont);
+    font-size: 30px;
     color: var(--midnight);
 }
 
