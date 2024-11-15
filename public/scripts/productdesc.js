@@ -1,6 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
-import { getFirestore, doc, updateDoc, arrayUnion, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+import { doc, updateDoc, arrayUnion, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+import { getFirestore, collection, query, where, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDlnPImmvlGesXSzXqH-RLI4QyL2qVkKd0",
@@ -13,11 +14,54 @@ const firebaseConfig = {
   };
 
 const app = initializeApp(firebaseConfig);
-const db = getFirestore();
-const auth = getAuth();
+const db = getFirestore(app);
+const auth = getAuth(app);
 
+let currentUser;
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get("id");
+
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        currentUser = user;
+        loadProduct();
+    } else {
+        console.log("No user is signed in.");
+    }
+});
+
+async function startChat(sellerID) {
+    if (currentUser) {
+        const chatID = await getOrCreateChat(currentUser.uid, sellerID);
+        window.location.href = `chat.html?chatID=${chatID}&sellerID=${sellerID}`;
+    } else {
+        alert("Please log in to start a chat.");
+    }
+}
+
+async function getOrCreateChat(buyerID, sellerID) {
+    const chatsRef = collection(db, "chats");
+    const chatQuery = query(chatsRef, where("participants", "array-contains", buyerID));
+    const querySnapshot = await getDocs(chatQuery);
+    let existingChatID = null;
+
+    querySnapshot.forEach((doc) => {
+        const chatData = doc.data();
+        if (chatData.participants.includes(sellerID)) {
+            existingChatID = doc.id;
+        }
+    });
+
+    if (existingChatID) {
+        return existingChatID;
+    } else {
+        const newChatDoc = await addDoc(chatsRef, {
+            participants: [buyerID, sellerID],
+            messages: []
+        });
+        return newChatDoc.id;
+    }
+}
 
 async function addToCart(product) {
     const user = auth.currentUser;
@@ -29,7 +73,6 @@ async function addToCart(product) {
     const cartDocRef = doc(db, "carts", user.uid);
 
     try {
-        // Use Firestore's arrayUnion to add the product to the "items" array in the user's cart
         await updateDoc(cartDocRef, {
             items: arrayUnion({
                 productId: product.id,
@@ -40,7 +83,6 @@ async function addToCart(product) {
             })
         });
     } catch (error) {
-        // If the cart document doesn't exist, create it
         if (error.code === 'not-found') {
             await setDoc(cartDocRef, {
                 items: [{
@@ -77,12 +119,21 @@ async function loadProduct() {
         document.getElementById("productImage").src = productData.imageUrl;
 
         document.getElementById("addToCartBtn").addEventListener("click", () => addToCart({ id: productId, ...productData }));
+        
+        const sellerID = productData.creatorID; 
+
+        // Add event listener to Chat Seller button, passing the sellerID
+        const chatSellerButton = document.getElementById("chatSeller");
+        if (chatSellerButton) {
+            chatSellerButton.addEventListener("click", () => startChat(sellerID));
+        } else {
+            console.error("Chat Seller button not found");
+        }
     } else {
         console.log("No such product found!");
     }
 }
 
-// Initialize authentication state and load product details
 onAuthStateChanged(auth, (user) => {
     if (user) {
         loadProduct();

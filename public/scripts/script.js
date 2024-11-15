@@ -50,6 +50,11 @@ const firebaseConfig = {
 
   const productsCollection = collection(db, "products");
 
+// Function to redirect to chat page with specific chatID
+function goToChat(chatID, sellerID) {
+    window.location.href = `chat.html?chatID=${chatID}&sellerID=${sellerID}`;
+}
+
   async function displayProducts() {
     const productGrid = document.getElementById("productGrid");
     productGrid.innerHTML = ""; // Clear any existing content
