@@ -37,45 +37,50 @@
 </head>
 <body>
     <h1>PeduliDisabilitas.</h1>
-    <form class="register-form">
-        <h2>Register</h2>
-        <div class="input-group1"></div>
-            
-            <label for="email">Email</label>
-            <input type="email" id="register-email" name="email" placeholder="" required>
-            
-            <label for="username">Username</label>
-            <input type="text" id="register-username" name="username" placeholder="" required>
-
-            <label for="username">Name</label>
-            <input type="text" id="register-name" name="name" placeholder="" required>
-
-            <label for="phone">Phone Number</label>
-            <input type="text" id="register-phone" name="phone" placeholder="" required>
-
-            <label for="dob">Date of Birth</label>
-            <input type="date" id="register-dob" name="dob" placeholder="" required>
-
-            <label for="gender">Gender</label>
-            <div class="gender-group">
-                <input id="gender" type="radio" id="male" name="gender" value="male" required>
-                <label for="male">Male</label>
+    <div class="form-section">
+        <form class="register-form">
+            <h2>Register</h2>
+            <div class="input-group1"></div>
                 
-                <input id="gender" type="radio" id="female" name="gender" value="female" required>
-                <label for="female">Female</label>
-            </div>            
+                <label for="email">Email</label>
+                <input type="email" id="register-email" name="email" placeholder="" required>
+                
+                <label for="username">Username</label>
+                <input type="text" id="register-username" name="username" placeholder="" required>
+    
+                <label for="username">Name</label>
+                <input type="text" id="register-name" name="name" placeholder="" required>
+    
+                <label for="phone">Phone Number</label>
+                <input type="text" id="register-phone" name="phone" placeholder="" required>
+    
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="register-dob" name="dob" placeholder="" required>
+    
+                <label for="gender">Gender</label>
+                <div class="gender-group">
+                    <input id="gender" type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    
+                    <input id="gender" type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                </div>            
+    
+                <label for="password">Password</label>
+                <input type="password" id="register-password" name="password" placeholder="" required>
+    
+                <label for="password">Confirm Password</label>
+                <input type="password" id="confirmpass" name="confirmpass" placeholder="" required>
 
-            <label for="password">Password</label>
-            <input type="password" id="register-password" name="password" placeholder="" required>
+                <button class="reg" type="submit">Register</button>
 
-            <label for="password">Confirm Password</label>
-            <input type="password" id="confirmpass" name="confirmpass" placeholder="" required>
-        </div>
-        <div class="button-register">
-            <button class="reg" type="submit">Register</button>
-        </div>
-        <h5>Already have an account? <a class="regist" href="login.html">Login</a></h5>
-    </form>
+                <h5>Already have an account? <a class="regist" href="login.html">Login</a></h5>
+            </div>
+        
+            
+        </form>
+    </div>
+    
 
     <script type="module" src="../scripts/register.js"></script>
    

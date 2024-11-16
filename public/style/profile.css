@@ -265,6 +265,8 @@ body {
 
 .profile-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
@@ -275,14 +277,12 @@ body {
     font-style: normal;
     color: #7794b6;
     font-size: 40px;
-    padding-left: 4rem;
-    padding-right: -4rem;
     isolation: isolate;
     margin-top: 10rem;
+    margin-bottom: 5rem;
     margin-left: 5rem;
-    margin-right: 10rem;
+    margin-right: 5rem;
     gap: 10rem;
-    margin-bottom: 2rem;
 }
 
 .sidebar {
@@ -300,7 +300,6 @@ body {
     height: 250px;
     border-radius: 50%;
     margin-top: 5rem;
-    margin-left: 6rem;
 }
 
 .upload-section {
@@ -309,7 +308,6 @@ body {
     font-style: normal;
     text-align: center;
     margin-top: 7rem;
-    margin-left: 6rem;
     margin-bottom: 1rem;
 }
 
@@ -355,8 +353,7 @@ body {
 
 .profile-details {
     padding: 20px;
-    background-color: #f8fbff;
-    width: 500px;
+
 }
 
 .header {
@@ -365,7 +362,6 @@ body {
     align-items: center;
     margin-top: 1rem;
     margin-bottom: 2rem;
-    margin-right: -13rem;
 }
 
 .header h2 {

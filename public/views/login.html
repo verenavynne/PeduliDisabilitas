@@ -33,21 +33,24 @@
 </head>
 <body>
     <h1>PeduliDisabilitas.</h1>
-    <form class="login-form" id="login-form">
-        <h2>Login</h2>
-        <div class="input-group1"></div>
-            <label for="email">Email</label>
-            <input type="email" id="login-email" name="email" placeholder="" required>
+    <div class="form-section">
+        <form class="login-form" id="login-form">
+            <h2>Login</h2>
+            <div class="input-group1"></div>
+                <label for="email">Email</label>
+                <input type="email" id="login-email" name="email" placeholder="" required>
+    
+                <label for="password">Password</label>
+                <input type="password" id="login-password" name="password" placeholder="" required>
 
-            <label for="password">Password</label>
-            <input type="password" id="login-password" name="password" placeholder="" required>
-        </div>
-        <div class="button-login">
-            <button class="log" type="submit">Login</button>
-        </div>
-        <h5>Don't have an account? <a class="regist" href="register.html">Register</a></h5>
-        
-    </form>
+                <button class="log" type="submit">Login</button>
+                <h5>Don't have an account? <a class="regist" href="register.html">Register</a></h5>
+            </div>
+            
+            
+        </form>
+    </div>
+    
     <script type="module" src="../scripts/login.js" defer></script>
 </body>
 </html>
