@@ -46,56 +46,59 @@
         </div>
     </nav>
 
-    <div class="payment-container">
-        <form class="payment-form" id="paymentForm">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="card-info">Card Information</label>
-            <div class="card-info">
-                <div class="card-number-container">
-                    <input type="text" id="card-number" name="card-number" placeholder="Card Number" required>
-                    <span class="card-logo">VISA</span>
+    <div class="payment-sect">
+        <div class="payment-container">
+            <form class="payment-form" id="paymentForm">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="card-info">Card Information</label>
+                <div class="card-info">
+                    <div class="card-number-container">
+                        <input type="text" id="card-number" name="card-number" placeholder="Card Number" required>
+                        <span class="card-logo">VISA</span>
+                    </div>
+                    <div class="expiry-cvc">
+                        <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+                        <input type="text" id="cvc" name="cvc" placeholder="CVC" required>
+                    </div>
                 </div>
-                <div class="expiry-cvc">
-                    <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
-                    <input type="text" id="cvc" name="cvc" placeholder="CVC" required>
-                </div>
-            </div>
-
-            <label for="cardholder-name">Cardholder Name</label>
-            <input type="text" id="cardholder-name" name="cardholder-name" required>
-
-            <label for="country">Region</label>
-            <select id="country" name="country" required>
-                <option value="">Select Region</option>
-                <option value="JI">Jakarta, Indonesia</option>
-                <option value="WJ">West Java, Indonesia</option>
-                <option value="EJ">East Java, Indonesia</option>
-                <option value="CJ">Central Java, Indonesia</option>
-                <option value="MS">West Sumatera, Indonesia</option>
-                <option value="MS">East Sumatera, Indonesia</option>
-                <option value="MS">South Sumatera, Indonesia</option>
-                <option value="MS">North Sumatera, Indonesia</option>
-                <option value="MS">South Kalimantan, Indonesia</option>
-                <option value="MS">North Kalimantan, Indonesia</option>
-                <option value="MS">East Kalimantan, Indonesia</option>
-                <option value="MS">West Kalimantan, Indonesia</option>
-                <option value="MS">West Sulawesi, Indonesia</option>
-                <option value="MS">South Sulawesi, Indonesia</option>
-                <option value="MS">North Sulawesi, Indonesia</option>
-                <option value="MS">Central Sulawesi, Indonesia</option>
-                <option value="MS">Southeast Sulawesi, Indonesia</option>
-                <!-- Add more countries as needed -->
-            </select>
-
-            <label for="phone">Phone Number (optional)</label>
-            <input class="phone1" type="tel" id="phone" name="phone">
-
-            <button id="paymentButton" class="payment-button" type="submit" href="checkout.html">Rp. 0</button>
-            <p class="secure">Securely safe my information for 1-click checkout</p>
-        </form>
+    
+                <label for="cardholder-name">Cardholder Name</label>
+                <input type="text" id="cardholder-name" name="cardholder-name" required>
+    
+                <label for="country">Region</label>
+                <select id="country" name="country" required>
+                    <option value="">Select Region</option>
+                    <option value="JI">Jakarta, Indonesia</option>
+                    <option value="WJ">West Java, Indonesia</option>
+                    <option value="EJ">East Java, Indonesia</option>
+                    <option value="CJ">Central Java, Indonesia</option>
+                    <option value="MS">West Sumatera, Indonesia</option>
+                    <option value="MS">East Sumatera, Indonesia</option>
+                    <option value="MS">South Sumatera, Indonesia</option>
+                    <option value="MS">North Sumatera, Indonesia</option>
+                    <option value="MS">South Kalimantan, Indonesia</option>
+                    <option value="MS">North Kalimantan, Indonesia</option>
+                    <option value="MS">East Kalimantan, Indonesia</option>
+                    <option value="MS">West Kalimantan, Indonesia</option>
+                    <option value="MS">West Sulawesi, Indonesia</option>
+                    <option value="MS">South Sulawesi, Indonesia</option>
+                    <option value="MS">North Sulawesi, Indonesia</option>
+                    <option value="MS">Central Sulawesi, Indonesia</option>
+                    <option value="MS">Southeast Sulawesi, Indonesia</option>
+                    <!-- Add more countries as needed -->
+                </select>
+    
+                <label for="phone">Phone Number (optional)</label>
+                <input class="phone1" type="tel" id="phone" name="phone">
+    
+                <button id="paymentButton" class="payment-button" type="submit" href="checkout.html">Rp. 0</button>
+                <p class="secure">Securely safe my information for 1-click checkout</p>
+            </form>
+        </div>
     </div>
+
 
     <footer class="footer">
         <div class="container">

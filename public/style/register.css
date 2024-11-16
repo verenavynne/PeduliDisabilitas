@@ -9,21 +9,21 @@
     font-optical-sizing: auto;
     font-style: normal;
     position: relative;
-    height: 100vh;
+
     display: grid;
   }
   body::before{
     background-image: url("../assets/image/background.jpg");
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 90%;
+    /* background-size: 90%; */
     position: absolute;
     content: '';
     inset: 0;
     opacity: 0.7;
   }
   h1{
-    font-family: "Source Sans 3", sans-serif;
+    font-family: "Lora", serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
@@ -48,8 +48,17 @@
     max-width: 400px;
   }
   
+  .form-section{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .register-form {
-    margin-top: 3rem;
+
     font-family: "Lora", serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -59,7 +68,6 @@
     width: 30rem;
     border-radius: 20px;
     background-color: white;
-    margin-left: 30rem;
     opacity: 0.95;
     padding-bottom: 2rem;
     padding-left: 3rem;
@@ -70,7 +78,7 @@
     text-align: center;
     margin-bottom: 10px;
     font-size: 30px;
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
   .input-group1 {
     margin-top: 2rem;
@@ -78,7 +86,7 @@
   
   label {
     margin-bottom: 0.5rem;
-    /* color: #555; */
+
   }
   
   input {
@@ -107,17 +115,27 @@
     text-decoration: none;
     font-size: 13px;
     color: white;
+
+
   }
-  button {
-    margin-top: 1.5rem;
+  
+  button.reg {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 1rem auto;
+
     height: 35px;
     width: 70%;
-    margin-left: 3.5rem;
+
     border-radius: 10px;
+    padding: 1rem;
     background-color: #291d89;
     opacity: 100%;
     border: none;
+    cursor: pointer;
   }
+
   h5 {
     padding-top: 1rem;
     font-size: 12px;
